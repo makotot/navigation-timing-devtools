@@ -5,6 +5,7 @@
   "description": "",
   "background": {
     "scripts": [
+      "js/background.js"
     ]
   },
   "page_action": {
@@ -18,7 +19,9 @@
   "icons": {
   },
   "permissions": [
-    "tabs"
+    "tabs",
+    "http://*/*",
+    "https://*/*"
   ],
   "devtools_page": "devtools.html"
 }
