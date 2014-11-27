@@ -1,22 +1,22 @@
-var background = chrome.extension.getBackgroundPage();
-console.log(background.timing);
+//function cbFunc (content) {
+//  document.querySelector('#js-msg').innerHTML = content.url;
+//}
 
-function writeContent (msg) {
-  document.querySelector('#js-msg').innerHTML = msg;
-}
+//chrome.runtime.getBackgrundPage(function (bg) {
+//  bg.getCurrentContent(cbFunc);
+//});
 
-(function () {
-  document.querySelector('#js-trigger').addEventListener('click', function () {
-    chrome.extension.sendMessage({
-      content: 'foooo'
-    });
-  });
+//cbFunc({url: 'http://github.com'});
 
-  window.addEventListener('load', function () {
-    chrome.extension.sendMessage({
-      content: 'load'
-    });
-  });
-
-})();
-
+//var bgConnect = chrome.runtime.connect({
+//  name: 'panel'
+//});
+//
+////bgConnect.onMessage.addListener(function (msg) {
+////  cbFunc({url: msg});
+////});
+//
+//bgConnect.postMessage({
+//  name: 'init',
+//  tabId: chrome.devtools.inspectedWindow.tabId
+//});

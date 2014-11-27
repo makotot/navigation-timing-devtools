@@ -1,3 +1,9 @@
-chrome.runtime.sendMessage({timing: 'hoge'}, function (response) {
+chrome.runtime.sendMessage({
+  url: window.location.href
 });
-console.log(this);
+
+chrome.runtime.onConnect.addListener(function (port) {
+  port.onMessage.addListener(function () {
+  });
+  port.postMessage('from content');
+});
