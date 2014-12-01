@@ -16,7 +16,7 @@ var connections = {};
 
 chrome.runtime.onConnect.addListener(function (port) {
   var extensionListener = function (msg, sender, sendResponse) {
-    console.log(msg, sender)
+    console.log(msg, sender, sendResponse)
     if (msg.name === 'init') {
       connections[msg.tabId] = port;
       return;
@@ -26,6 +26,7 @@ chrome.runtime.onConnect.addListener(function (port) {
   port.onMessage.addListener(extensionListener);
 
   port.onDisconnect.addListener(function (port) {
+    console.log('disconnect ' + port)
     port.onMessage.removeListener(extensionListener);
 
     var tabs = Object.keys(connections);
@@ -40,7 +41,7 @@ chrome.runtime.onConnect.addListener(function (port) {
 });
 
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-  console.log(sender)
+  console.log(sender.tab.id, connections)
   if (sender.tab) {
     var tabId = sender.tab.id;
 
@@ -52,6 +53,10 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   } else {
     console.log('sender tab not defined')
   }
+
+  console.log('background')
+  console.log(request)
+  sendResponse(request);
 
   return true;
 });
