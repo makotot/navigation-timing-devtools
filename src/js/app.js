@@ -1,3 +1,8 @@
-var initPanel = function (msg) {
-  document.querySelector('#js-msg').innerHTML = JSON.stringify(msg);
-};
+document.querySelector('#js-trigger').addEventListener('click', function () {
+  chrome.runtime.sendMessage({
+    type: 'init',
+    data: {
+      prop: 'app'
+    }
+  });
+});
