@@ -1,5 +1,5 @@
 {
-  "name": "navigation-timing-devtools",
+  "name": "navigation-timing-panel",
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/makotot/navigation-timing-devtools.git"
+    "url": "https://github.com/makotot/navigation-timing-panel.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/makotot/navigation-timing-devtools/issues"
+    "url": "https://github.com/makotot/navigation-timing-panel/issues"
   },
-  "homepage": "https://github.com/makotot/navigation-timing-devtools",
+  "homepage": "https://github.com/makotot/navigation-timing-panel",
   "devDependencies": {
     "gulp": "~3.8.10",
     "gulp-6to5": "~1.0.2",

@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "navigation timing devtools",
+  "name": "navigation timing panel",
   "version": "0.0.0",
   "description": "",
   "background": {

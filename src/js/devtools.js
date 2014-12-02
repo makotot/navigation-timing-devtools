@@ -15,7 +15,7 @@ bgConnect.onMessage.addListener(function (msg) {
 });
 
 
-chrome.devtools.panels.create('navigation timing devtools', null, '../panel.html', function (panel) {
+chrome.devtools.panels.create('navigation timing', null, '../panel.html', function (panel) {
   panel.onShown.addListener(function setPanel (panelWin) {
     panel.onShown.removeListener(setPanel);
 

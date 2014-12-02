@@ -1,2 +1,4 @@
-# Navigation Timing devtools
+# Navigation Timing Panel
+
+WIP
 
